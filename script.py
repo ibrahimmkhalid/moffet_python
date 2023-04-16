@@ -132,6 +132,8 @@ def format_sheet(book: openpyxl.Workbook, sheet_name: str, rows: int):
     c.font = font
     c = sheet["J{}".format(rows + 1)]
     c.border = border
+    c.number_format = numbers.FORMAT_CURRENCY_USD
+    c.font = font
 
     c = sheet["G{}".format(rows + 1)]
     c.font = font
